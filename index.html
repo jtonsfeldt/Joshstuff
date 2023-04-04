@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+
+    <style>
+body { 
+    font-family: Courier, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin:auto;
+
+     }
+
+ main {
+ display: flex;
+flex-wrap:wrap;
+
+}    
+
+
+.box {
+  margin:10px;  
+  flex:1;
+
+
+  border: solid 2px black;
+
+
+}
+
+h1 {
+    text-shadow: 4px 4px  ;
+
+}
+
+h2 {
+  background-color: Red;
+  color: green;
+}
+span {
+  background-color: rgba(255,255,255,.5);
+}  
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit:contain;
+}
+
+p{
+color: red;
+
+}
+
+
+
+    
+    </style>
+  </head>
+
+  <body>
+
+    <main>
+
+      <script>
+        for (let i = 0; i < 101; i++) {
+          
+          //document.write(i);
+          document.write('<div class=\'box\'><img src=\'images/works-'+i+'.jpg\'></div>');
+
+}
+
+    </script>      
+
+
+    </main>
+  </body>
+</html>
