@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CSS 3d grid</title>
+    <style>
+
+
+
+body {
+        font: 10pt Arial, Helvetica, sans-serif;
+        perspective: 800px;
+}
+
+.tilt {
+       /* transform:rotateX(45deg); */
+
+        position:fixed;
+        overflow:auto;
+
+
+        height:100vh;
+
+
+        width: 100vw;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 20vw);
+       /* gap: 10px; */
+
+}
+      .tilt > div {
+      min-width:30vw;
+      margin:-10vw;
+      opacity:1;
+      width:fit-content;
+      height:fit-content;
+      filter:drop-shadow(16px 16px 10px black);
+      mix-blend-mode: difference;
+      }
+
+      img {
+        width:100%;
+        height:fit-content;
+        object-fit: contain;
+        animation-name: example;
+  animation-duration: 90s;
+  animation-iteration-count: infinite;
+        
+        }
+
+
+      img:hover {
+
+      }  
+
+      @keyframes example {
+  0% {transform:rotate(0deg);}
+  50% {transform:rotate(2deg);
+width:90%;}
+  100% {transform:rotate(0deg);
+width:100%;}   
+}
+
+
+
+
+    </style>
+  </head>
+
+<body>
+
+
+  <div class="tilt">
+
+    <script>
+        for (let i = 1; i < 100; i++) {
+
+            let x = Math.floor(Math.random() * 360) + 1;
+           let y = Math.floor(Math.random() * 19) + 1;
+          
+                    
+          document.write('<div style=\'transform:rotate('+x+'deg);\'><img src=\'images/works-'+i+'.jpg\' style=\' border-radius:'+x+'px; filter:blur('+y+'px); \'></div>');
+}
+ 
+    </script>
+
+  </div>
+
+
+
+
+
+</body>
+
+</html>
